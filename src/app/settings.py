@@ -21,6 +21,7 @@ from google.appengine.api import namespace_manager
 
 class AppSettings(ndb.Model):
     version = ndb.StringProperty(default='0.1', indexed=False)
+    allow_appengine_admins = ndb.BooleanProperty(default=False)
 
 
 class LazyAppSettings(object):
