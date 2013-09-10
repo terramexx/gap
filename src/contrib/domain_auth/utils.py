@@ -18,6 +18,7 @@ def _is_current_user_domain_admin(domain):
     if is_domain_admin is not None:
         return is_domain_admin
 
+    # Only domain admin can list all users in the domain
     is_domain_admin = False
     try:
         api = Api(['directory'], settings['oauth_client_email'], settings['oauth_private_key'], current_user.email())

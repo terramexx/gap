@@ -23,6 +23,9 @@ class AppSettings(ndb.Model):
     version = ndb.StringProperty(default='0.1', indexed=False)
     allow_appengine_admins = ndb.BooleanProperty(default=False)
 
+    oauth_private_key = ndb.StringProperty(default='', indexed=False)
+    oauth_client_email = ndb.StringProperty(default='', indexed=False)
+
 
 class LazyAppSettings(object):
     """
